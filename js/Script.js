@@ -9,8 +9,8 @@ function add(x, y) { //Funcion que dados dos strings de numeros retorna su suma 
   let second = getnum(y);
   let z = first + second;
   if (first == -1 || second == -1) {
-    return "zero";
     alert("Check your inputs!");
+    return "zero";
   } else {
     return z;
   }
@@ -46,9 +46,9 @@ function getnum(array) { //Funcion que dado un string del numero retorna su valo
 function getval(n) { //Funcion que busca el nombre del numero en inlges y retorna su valor numerico
   let a = n.toLowerCase()
   let r;
-  r = Numbers.find(  
+  r = Numbers.find(
     function (Numbers) {
-      return Numbers.name == a; 
+      return Numbers.name == a;
     }
   );
   if (r === undefined) return -1;
@@ -184,3 +184,14 @@ var Numbers = [ //Arreglo de objetos con el nombre del numero en ingles y su val
     "name": "and",
     "val": 0
   }];
+
+function handle(e) {
+  var x = document.getElementById("first-number").value;
+  var y = document.getElementById("second-number").value;
+  var key = e.keyCode || e.which;
+  if (key == 13) {
+      document.getElementById('answer').value = (add(x, y));
+    }
+  }
+
+

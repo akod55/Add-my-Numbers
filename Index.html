@@ -15,18 +15,18 @@
 
         <div id="input-num">
             <label>Your first number</label>
-            <input type="text" id="first-number" />
+            <input type="text" id="first-number" autofocus />
         </div>
         <div>
             <img id="sig-add" src="Images/add2.png">
         </div>
         <div id="input-num">
             <label>Your second number</label>
-            <input type="text" id="second-number" />
+            <input type="text" id="second-number" onkeypress="handle(event)"  />
         </div>
 
         <div id="butt-asw">
-            <input type="button" value="Add" onclick="main()" />
+            <input type="button" value="Add" onclick="main()" onkeypress="handle(event)" />
         </div>
 
         <div>
